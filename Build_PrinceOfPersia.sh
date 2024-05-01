@@ -19,7 +19,7 @@ echo "${GREEN}Prince of Persia${PURPLE} DOS Edition"
 echo "\n${PURPLE}The source code used is from a project called ${GREEN}SDLPoP${NC}\n"
 
 ARCH_NAME="$(uname -m)"
-echo "${PURPLE}Your CPU architecture is ${GREEN}${ARCH_NAME}${PURPLE}, so the app can only be run on Macs with a ${GREEN}${ARCH_NAME}${PURPLE} CPU${NC}"
+echo "${PURPLE}Your CPU architecture is ${GREEN}${ARCH_NAME}${PURPLE}, so the app can only be run on Macs with an ${GREEN}${ARCH_NAME}${PURPLE} CPU${NC}"
 
 echo "\n${PURPLE}${GREEN}Homebrew${PURPLE} and the ${GREEN}Xcode command-line tools${PURPLE} are required to build${NC}"
 echo "${PURPLE}If they are not present you will be prompted to install them${NC}\n"

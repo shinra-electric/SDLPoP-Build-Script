@@ -10,6 +10,9 @@ NC='\033[0m' # No Colour
 SCRIPT_DIR=${0:a:h}
 cd "$SCRIPT_DIR"
 
+# Detect CPU architecture
+ARCH_NAME="$(uname -m)"
+
 echo "\n${PURPLE}This script is for compiling a native macOS build of:"
 echo "${GREEN}Prince of Persia${PURPLE} DOS Edition"
 

@@ -43,11 +43,24 @@ do
 done
 
 # Check if Homebrew is installed
+echo "${PURPLE}Checking for Homebrew...${NC}"
 if ! command -v brew &> /dev/null; then
 	echo -e "${PURPLE}Homebrew not found. Installing Homebrew...${NC}"
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-	(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> $HOME/.zprofile
-	eval "$(/opt/homebrew/bin/brew shellenv)"
+	if [[ "${ARCH_NAME}" == "arm64" ]]; then 
+		(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> $HOME/.zprofile
+		eval "$(/opt/homebrew/bin/brew shellenv)"
+		else 
+		(echo; echo 'eval "$(/usr/local/bin/brew shellenv)"') >> $HOME/.zprofile
+		eval "$(/usr/local/bin/brew shellenv)"
+	fi
+	
+	# Check for errors
+	if [ $? -ne 0 ]; then
+		echo "${RED}There was an issue installing Homebrew${NC}"
+		echo "${PURPLE}Quitting script...${NC}"	
+		exit 1
+	fi
 else
 	echo -e "${PURPLE}Homebrew found. Updating Homebrew...${NC}"
 	brew update

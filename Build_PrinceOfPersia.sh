@@ -163,12 +163,8 @@ if [[ -a prince1024.png ]]; then
 	mkdir prince.iconset
 	sips -z 16 16     prince1024.png --out prince.iconset/icon_16x16.png
 	sips -z 32 32     prince1024.png --out prince.iconset/icon_16x16@2x.png
-	sips -z 32 32     prince1024.png --out prince.iconset/icon_32x32.png
-	sips -z 64 64     prince1024.png --out prince.iconset/icon_32x32@2x.png
 	sips -z 128 128   prince1024.png --out prince.iconset/icon_128x128.png
 	sips -z 256 256   prince1024.png --out prince.iconset/icon_128x128@2x.png
-	sips -z 256 256   prince1024.png --out prince.iconset/icon_256x256.png
-	sips -z 512 512   prince1024.png --out prince.iconset/icon_256x256@2x.png
 	sips -z 512 512   prince1024.png --out prince.iconset/icon_512x512.png
 	cp prince1024.png prince.iconset/icon_512x512@2x.png
 	iconutil -c icns prince.iconset

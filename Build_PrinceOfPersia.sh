@@ -125,6 +125,10 @@ PLIST="<?xml version=\"1.0\" encoding=\"UTF-8\"?>
 	<string>Prince of Persia</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
+	<key>CFBundleSupportedPlatforms</key>
+	<array>
+		<string>MacOSX</string>
+	</array>
 	<key>CFBundleShortVersionString</key>
 	<string>1.23</string>
 	<key>CFBundleVersion</key>
